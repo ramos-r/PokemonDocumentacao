@@ -1,0 +1,25 @@
+{
+  "name": "Pokedex.vidal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidal987/Pokedex.vidal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vidal987/Pokedex.vidal/issues"
+  },
+  "homepage": "https://github.com/vidal987/Pokedex.vidal#readme"
+}

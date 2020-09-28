@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- Logo do Pokemon -->
+        <img class="pokemon-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo" class="pokemon-logo">
+    </header>
+    <main>
+        <div class="center">
+            <div class="title">
+                <h1>Pokédex</h1>
+            </div>
+           <!-- Botão do Search -->
+            <form class="busca">
+                   <input type="search" class="search-input" placeholder="  Buscar Pokémon..." id="nome">
+                   <button class="search-button"><b>Buscar</b></button>
+            </form>
+         </div>
+        <div id="poke_container" class="poke-container">
+        </div>
+        <form>
+
+        </form>
+        <script>
+            // // GET retrieve all to-do’s
+            // fetch('http://localhost:3000/pokemons')
+            // .then(response => response.json())
+            // .then(json => console.log(json))
+            // // will return all resources
+
+            // // POST adds a random id to the object sent
+            // fetch('http://localhost:3000/pokemons', {
+            // method: 'POST',
+            // body: JSON.stringify({
+            // userId: 1,
+            // completed: false
+            // }),
+
+            // headers: {
+            // "Content-type": "application/json; charset=UTF-8"
+            // }
+            // })
+            // .then(response => response.json())
+            // .then(json => console.log(json))
+
+            // // PUT to the resource with id = 5 to change the name of task
+            // fetch('http://localhost:3000/pokemons/5', {
+            // method: 'PUT',
+            // body: JSON.stringify({
+            // userId: 1,
+            // id: 5,
+            // completed: false
+            // }),
+            // })
+            // .then(response => response.json())
+            // .then(json => console.log(json))
+
+
+            // // DELETE task with id = 1
+            // fetch('http://localhost:3000/pokemons/1', {
+            // method: 'DELETE'
+            // })
+            // // empty response: {}
+
+
+        </script>
+        <script src="index.js"></script>
+    </main>
+    <footer>
+        <div class="h2"><h2>PokeEnterprise</h2></div>
+        <ul>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/ramos-r">Rebecca Ramos</a></li>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/JoseCarlos69">José Uchoa</a></li>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/vidal987">Matheus Vidal</a></li>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/firgo12">Guilherme Cunha</a></li>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/leoorodr">Leonardo Rodrigues</a></li>
+            <li><span><img src="./img/github-logo.svg"></span><a target="_blank" href="https://github.com/marques-vinid">Vinicius Dias</a></li>
+        </ul>
+    </footer>
+<script src="index.js"></script>
+</body>
+</html>
