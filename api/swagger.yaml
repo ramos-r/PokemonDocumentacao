@@ -1,0 +1,167 @@
+---
+swagger: "2.0"
+info:
+  description: "Coleta as APIs dos pokémons e mostra os dados de cada pokémon."
+  version: "1.0.0"
+  title: "api-Pokedex"
+  termsOfService: "http://localhost:3000/pokemons/v1/termo-uso"
+  contact:
+    name: "Suporte"
+    url: "http://localhost:3000/pokemons/v1/suporte"
+    email: "suporte@pokedexapi.com"
+host: "localhost:3000"
+basePath: "/pokemons/v1"
+tags:
+- name: "Pokémons"
+  description: "Tudo sobre o seu Pokémon"
+schemes:
+- "http"
+- "https"
+paths:
+  /pokemons:
+    get:
+      tags:
+      - "Pokémons"
+      summary: "Buscar Pokémon"
+      description: "Busca um Pokémon na Pokedex"
+      operationId: "buscaPokemon"
+      consumes:
+      - "aplication/json"
+      produces:
+      - "aplication/json"
+      parameters:
+      - in: "body"
+        name: "pokemons_"
+        required: false
+        schema:
+          $ref: "#/definitions/pokemons_"
+      responses:
+        "200":
+          description: "OK"
+        "404":
+          description: "Pokémon não encontrado"
+        "500":
+          description: "Erro interno no servidor"
+      x-swagger-router-controller: "Pokmons"
+    post:
+      tags:
+      - "Pokémons"
+      summary: "Adicionar Pokémon"
+      description: "Adiciona um novo Pokémon na Pokedex"
+      operationId: "adicionaPokemon"
+      consumes:
+      - "aplication/json"
+      produces:
+      - "aplication/json"
+      parameters:
+      - in: "body"
+        name: "pokemons_"
+        required: false
+        schema:
+          $ref: "#/definitions/pokemons__1"
+      responses:
+        "201":
+          description: "Adicionado com sucesso"
+          schema:
+            $ref: "#/definitions/pokemons__1"
+        "400":
+          description: "Requisição inválida"
+        "500":
+          description: "Erro interno no servidor"
+      x-swagger-router-controller: "Pokmons"
+  /pokemons/{id}:
+    put:
+      tags:
+      - "Pokémons"
+      summary: "Atualizar Pokémon"
+      description: "Atualiza as informações de um Pokémon"
+      operationId: "atualizaPokemon"
+      consumes:
+      - "aplication/json"
+      produces:
+      - "aplication/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        minimum: 1
+      - in: "body"
+        name: "pokemon_"
+        required: false
+        schema:
+          $ref: "#/definitions/pokemon_"
+      responses:
+        "200":
+          description: "Aceito com sucesso"
+        "400":
+          description: "Requisição inválida"
+        "500":
+          description: "Erro interno no servidor"
+      x-swagger-router-controller: "Pokmons"
+    delete:
+      tags:
+      - "Pokémons"
+      summary: "Deletar Pokémon"
+      description: "Deletar as informações de um Pokémon"
+      operationId: "deletaPokemon"
+      consumes:
+      - "aplication/json"
+      produces:
+      - "aplication/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        minimum: 1
+      - in: "body"
+        name: "pokemon_"
+        required: false
+        schema:
+          $ref: "#/definitions/pokemon__1"
+      responses:
+        "204":
+          description: "Deletado com sucesso"
+        "400":
+          description: "Requisição inválida"
+        "500":
+          description: "Erro interno no servidor"
+      x-swagger-router-controller: "Pokmons"
+definitions:
+  pokemons_:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: 5
+      nome:
+        type: "string"
+        example: "Charmeleon"
+  pokemon_:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: 5
+      nome:
+        type: "string"
+        example: "Charizard"
+  pokemons__1:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: 5
+      nome:
+        type: "string"
+        example: "Charmander"
+  pokemon__1:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: 5
+      nome:
+        type: "string"
+        example: "Charizard"
